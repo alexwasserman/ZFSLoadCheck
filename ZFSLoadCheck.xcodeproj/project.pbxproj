@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		E47578E318E58B7A00C668DE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47578E218E58B7A00C668DE /* Cocoa.framework */; };
 		E475791A18E5A06A00C668DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E475791418E5A06A00C668DE /* AppDelegate.m */; };
+		E475791C18E5A06A00C668DE /* LogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E475791718E5A06A00C668DE /* LogManager.m */; };
 		E475791D18E5A06A00C668DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E475791818E5A06A00C668DE /* main.m */; };
 		E475791E18E5A06A00C668DE /* main.xib in Resources */ = {isa = PBXBuildFile; fileRef = E475791918E5A06A00C668DE /* main.xib */; };
-		FA47F0181E4D8CEF0066B441 /* com.alexwasserman.zfsloadcheck.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA47F0171E4D8CEF0066B441 /* com.alexwasserman.zfsloadcheck.plist */; };
-		FAF7CA7D1E4D947D0066B441 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E475791518E5A06A00C668DE /* Info.plist */; };
+		FA0DBDFF1E4DA3190066B441 /* com.alexwasserman.zfsloadcheck.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA0DBDFE1E4DA3190066B441 /* com.alexwasserman.zfsloadcheck.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +21,11 @@
 		E475791318E5A06A00C668DE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E475791418E5A06A00C668DE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E475791518E5A06A00C668DE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E475791618E5A06A00C668DE /* LogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogManager.h; sourceTree = "<group>"; };
+		E475791718E5A06A00C668DE /* LogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogManager.m; sourceTree = "<group>"; };
 		E475791818E5A06A00C668DE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E475791918E5A06A00C668DE /* main.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = main.xib; sourceTree = "<group>"; };
-		FA47F0171E4D8CEF0066B441 /* com.alexwasserman.zfsloadcheck.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = com.alexwasserman.zfsloadcheck.plist; sourceTree = "<group>"; };
+		FA0DBDFE1E4DA3190066B441 /* com.alexwasserman.zfsloadcheck.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = com.alexwasserman.zfsloadcheck.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,14 +43,16 @@
 		E47578D618E58B7A00C668DE = {
 			isa = PBXGroup;
 			children = (
-				FA47F0171E4D8CEF0066B441 /* com.alexwasserman.zfsloadcheck.plist */,
 				E475791818E5A06A00C668DE /* main.m */,
 				E475791518E5A06A00C668DE /* Info.plist */,
 				E475791918E5A06A00C668DE /* main.xib */,
 				E475791318E5A06A00C668DE /* AppDelegate.h */,
 				E475791418E5A06A00C668DE /* AppDelegate.m */,
+				E475791618E5A06A00C668DE /* LogManager.h */,
+				E475791718E5A06A00C668DE /* LogManager.m */,
 				E47578E118E58B7A00C668DE /* Frameworks */,
 				E47578E018E58B7A00C668DE /* Products */,
+				FA0DBDFE1E4DA3190066B441 /* com.alexwasserman.zfsloadcheck.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,7 +98,7 @@
 		E47578D718E58B7A00C668DE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0510;
 			};
 			buildConfigurationList = E47578DA18E58B7A00C668DE /* Build configuration list for PBXProject "ZFSLoadCheck" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -118,9 +122,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAF7CA7D1E4D947D0066B441 /* Info.plist in Resources */,
+				FA0DBDFF1E4DA3190066B441 /* com.alexwasserman.zfsloadcheck.plist in Resources */,
 				E475791E18E5A06A00C668DE /* main.xib in Resources */,
-				FA47F0181E4D8CEF0066B441 /* com.alexwasserman.zfsloadcheck.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E475791C18E5A06A00C668DE /* LogManager.m in Sources */,
 				E475791D18E5A06A00C668DE /* main.m in Sources */,
 				E475791A18E5A06A00C668DE /* AppDelegate.m in Sources */,
 			);
@@ -143,6 +147,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
@@ -154,19 +159,13 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -185,7 +184,6 @@
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				ONLY_ACTIVE_ARCH = YES;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
 			};
@@ -195,6 +193,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
@@ -206,18 +205,13 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -245,6 +239,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexwasserman.zfsloadcheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -254,6 +249,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexwasserman.zfsloadcheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

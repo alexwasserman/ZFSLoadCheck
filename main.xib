@@ -8,45 +8,49 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication"/>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="ZFS Mount Check" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" deferred="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="210" userLabel="Panel" customClass="NSPanel">
-            <windowStyleMask key="styleMask" titled="YES" utility="YES" HUD="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" topStrut="YES"/>
-            <rect key="contentRect" x="140" y="992" width="178" height="74"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject">
+            <connections>
+                <outlet property="delegate" destination="219" id="221"/>
+            </connections>
+        </customObject>
+        <window title="ZFS Load Check" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" deferred="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="210" userLabel="Panel" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" utility="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="100" y="100" width="250" height="73"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
             <view key="contentView" id="211">
-                <rect key="frame" x="0.0" y="0.0" width="178" height="74"/>
+                <rect key="frame" x="0.0" y="0.0" width="250" height="73"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRG-6K-DnK">
-                        <rect key="frame" x="18" y="50" width="142" height="17"/>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ET2-BY-cWV">
+                        <rect key="frame" x="18" y="42" width="214" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="zfsStatus" placeholderString="Checking..." id="Rxz-j8-cYC">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="UXz-9I-1qK">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.0082780116580311036" green="0.0082780116580311036" blue="0.0082780116580311036" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sv0-oi-jVj">
-                        <rect key="frame" x="56" y="13" width="66" height="32"/>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="212">
+                        <rect key="frame" x="92" y="6" width="66" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MKm-6K-y2Q">
+                        <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="218">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="simpleButtonPressed:" target="219" id="koB-8F-vp8"/>
+                            <action selector="terminate:" target="-1" id="213"/>
                         </connections>
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="146" y="-156"/>
+            <point key="canvasLocation" x="132" y="100.5"/>
         </window>
         <customObject id="219" userLabel="AppDelegate" customClass="AppDelegate">
             <connections>
-                <outlet property="zfsStatus" destination="zRG-6K-DnK" id="RjQ-qL-heQ"/>
+                <outlet property="panel" destination="210" id="220"/>
+                <outlet property="zfsStatus" destination="ET2-BY-cWV" id="LIl-Dt-Bzr"/>
             </connections>
         </customObject>
-        <userDefaultsController representsSharedInstance="YES" id="hIW-i0-U7e"/>
     </objects>
 </document>

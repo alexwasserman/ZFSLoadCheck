@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>com.alexwasserman.zfsLoadCheck</string>
+	<string>com.alexwasserman.zfsloadcheck</string>
 	<key>LimitLoadToSessionType</key>
-	<string>Aqua</string>
+	<string>LoginWindow</string>
 	<key>KeepAlive</key>
 	<true/>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Library/PrivilegedHelperTools/ZFSLoadCheck.app/Contents/MacOS/ZFSLoadCheck</string>
+		<string>/Library/PrivilegedHelperTools/ZFSLoadCheck.app/Contents/MacOS/ZFSLoadCheck.app</string>
 	</array>
 </dict>
 </plist>
