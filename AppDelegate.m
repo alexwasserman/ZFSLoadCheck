@@ -4,6 +4,7 @@
 @interface AppDelegate () <NSApplicationDelegate>
 
 @property (nonatomic, assign, readwrite) IBOutlet NSPanel *     panel;
+@property (retain) IBOutlet NSTextField *zfsStatus;
 
 @end
 
