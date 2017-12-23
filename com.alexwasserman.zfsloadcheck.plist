@@ -10,7 +10,7 @@
 	<true/>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Library/PrivilegedHelperTools/ZFSLoadCheck.app/Contents/MacOS/ZFSLoadCheck.app</string>
+		<string>/Library/PrivilegedHelperTools/ZFSLoadCheck.app/Contents/MacOS/ZFSLoadCheck</string>
 	</array>
 </dict>
 </plist>
